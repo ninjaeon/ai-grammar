@@ -149,7 +149,7 @@ class OllamaProvider implements Provider {
     const response: GenerateResponse | null = await chrome.runtime.sendMessage({
       type: "ollama.generate",
       data: {
-        model: "llama3.1",
+        model: "hf.co/unsloth/gemma-3n-E4B-it-GGUF:Q8_0",
         prompt,
         system: "correct grammar in text, don't add explanations",
       } satisfies GenerateRequest,
